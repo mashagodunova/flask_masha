@@ -79,6 +79,9 @@ def result():
     html_code = html_code.replace('{{ html_table }}', all_ankets)
     html_code = html_code.replace('{{ html_table1 }}', all_users)
     html_code = html_code.replace('{{ total_count }}', str(all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ min_age }}', str(all_users_tb['Возраст'].min()))
+    html_code = html_code.replace('{{ avg_age }}', str(all_users_tb['Возраст'].sum()/all_users_tb['Возраст'].count()))
+    html_code = html_code.replace('{{ max_age }}', str(all_users_tb['Возраст'].max()))
     html_code = html_code.replace('{{ quest1ans1 }}', str(int(all_ankets_tb[all_ankets_tb['Вопрос 1']=='снизилась незначительно'].count()[1])/all_ankets_tb.shape[0]))
     html_code = html_code.replace('{{ quest1ans2 }}', str(int(
         all_ankets_tb[all_ankets_tb['Вопрос 1'] == 'заметно снизилась'].count()[1]) / all_ankets_tb.shape[0]))
@@ -86,4 +89,34 @@ def result():
         all_ankets_tb[all_ankets_tb['Вопрос 1'] == 'явно упала'].count()[1]) / all_ankets_tb.shape[0]))
     html_code = html_code.replace('{{ quest1ans4 }}', str(int(
         all_ankets_tb[all_ankets_tb['Вопрос 1'] == 'резко понизилась'].count()[1]) / all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest2ans1 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 2'] == 'при усиленной нагрузке'].count()[1]) / all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest2ans2 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 2'] == 'при обычной нагрузке'].count()[1]) / all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest2ans3 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 2'] == 'при облегченной нагрузке'].count()[1]) / all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest2ans4 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 2'] == 'без всякой нагрузки'].count()[1]) / all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest3ans1 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 3'] == 'могу без всякого усилия'].count()[1]) / all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest3ans2 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 3'] == 'усилием воли восстанавливаю полностью'].count()[1]) / all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest3ans3 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 3'] == 'восстанавливаю частично'].count()[1]) /
+                                                          all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest3ans4 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 3'] == 'лишь незначительно'].count()[1]) /
+                                                          all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest4ans1 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 4'] == 'временами снижение интереса к работе'].count()[1]) /
+                                                          all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest4ans2 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 4'] == 'бывает неустойчивым настроение'].count()[1]) /
+                                                          all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest4ans3 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 4'] == 'стал раздражителен'].count()[1]) /
+                                                          all_ankets_tb.shape[0]))
+    html_code = html_code.replace('{{ quest4ans4 }}', str(int(
+        all_ankets_tb[all_ankets_tb['Вопрос 4'] == 'чувствую себя угнетенно, резкая раздражительность'].count()[1]) /
+                                                         all_ankets_tb.shape[0]))
     return html_code

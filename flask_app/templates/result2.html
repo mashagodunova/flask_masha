@@ -8,11 +8,10 @@
     <h1>Результаты опроса:</h1>
     {{ html_table }}
     {{ html_table1 }}
-    <h1>статистика</h1>
+    <h1>Статистика</h1>
 
-      <h3>общая</h3>
+      <h3>По пользователям</h3>
       <div class="row">
-
         <div class="col-sm-3">
           <div class="card">
             <div class="card-body">
@@ -21,6 +20,32 @@
             </div>
           </div>
         </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ min_age }}</h5>
+              <p class="card-text">Минимальный возраст участника</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ avg_age }}</h5>
+              <p class="card-text">Средний возраст участника</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ max_age }}</h5>
+              <p class="card-text">Максимальный возраст участника</p>
+            </div>
+          </div>
+        </div>
+      <h3>По вопросам</h3>
+      <div class="row">
          <div class="col-sm-3">
           <div class="card">
             <div class="card-body">
@@ -50,6 +75,102 @@
             <div class="card-body">
               <h5 class="card-title">{{ quest1ans4 }}</h5>
               <p class="card-text">Доля тех, у кого работоспособность резко понизилась</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest2ans1 }}</h5>
+              <p class="card-text">Доля тех, кто стал уставать при усиленной нагрузке</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest2ans2 }}</h5>
+              <p class="card-text">Доля тех, кто стал уставать при обычной нагрузке</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest2ans3 }}</h5>
+              <p class="card-text">Доля тех, кто стал уставать при облегченной нагрузке</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest2ans4 }}</h5>
+              <p class="card-text">Доля тех, кто стал уставать без всякой нагрузки</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest3ans1 }}</h5>
+              <p class="card-text">Доля тех, кто может без всякого усилия вернуть себе прежнюю работоспособность</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest3ans2 }}</h5>
+              <p class="card-text">Доля тех, кто усилием воли восстанавливает прежнюю работоспособность полностью</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest3ans3 }}</h5>
+              <p class="card-text">Доля тех, кто восстанавливает работоспособность частично</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest3ans4 }}</h5>
+              <p class="card-text">Доля тех, кто восстанавливает работоспособность лишь незначительно</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest4ans1 }}</h5>
+              <p class="card-text">Доля тех, кто временами замечает снижение интереса к работе</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest4ans2 }}</h5>
+              <p class="card-text">Доля тех, кто временами замечает неустойчивое настроение</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest4ans3 }}</h5>
+              <p class="card-text">Доля тех, кто стал раздражителен</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest4ans4 }}</h5>
+              <p class="card-text">Доля тех, кто чувствует себя угнетенно</p>
             </div>
           </div>
         </div>
