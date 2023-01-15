@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты</title>
+</head>
+<body>
+    <h1>Результаты опроса:</h1>
+    {{ html_table }}
+    {{ html_table1 }}
+    <h1>статистика</h1>
+
+      <h3>общая</h3>
+      <div class="row">
+
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ total_count }}</h5>
+              <p class="card-text">человек прошло опрос</p>
+            </div>
+          </div>
+        </div>
+         <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest1ans1 }}</h5>
+              <p class="card-text">Доля тех, у кого работоспособность снизилась незначительно</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest1ans2 }}</h5>
+              <p class="card-text">Доля тех, у кого работоспособность снизилась заметно</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest1ans3 }}</h5>
+              <p class="card-text">Доля тех, у кого работоспособность явно упала</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ quest1ans4 }}</h5>
+              <p class="card-text">Доля тех, у кого работоспособность резко понизилась</p>
+            </div>
+          </div>
+        </div>
+    <a href="/"><button>На главную страницу</button></a>
+</body>
+</html>
